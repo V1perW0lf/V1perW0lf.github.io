@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h1 {
+	color: rgba(255, 0, 255, 1);
+	border: 2px solid purple;
+}
