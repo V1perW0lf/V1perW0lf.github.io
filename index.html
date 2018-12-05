@@ -4,13 +4,15 @@ layout: default
 <body>
 
 <div class="tab">
-	<button class="tablinks" onClick="openTopic(event, 'resume')">Resume</button>
+	<button class="tablinks" onClick="openTopic(event, 'resume')" id="defaultOpen">Resume</button>
 	<button class="tablinks" onClick="openTopic(event, 'ethics')">Ethics</button>
 	<button class="tablinks" onClick="openTopic(event, 'internet of things')">Internet of Things</button>
 	<button class="tablinks" onClick="openTopic(event, 'privacy')">Privacy</button>
 	<button class="tablinks" onClick="openTopic(event, 'intellectual property')">Intellectual Property</button>
 	<button class="tablinks" onClick="openTopic(event, 'regulations')">Regulations and Freedoms</button>
 </div>
+
+<br>
 
 <div id="resume" class="tabcontent">
 	<embed src="Ellis_Resume.pdf" width="800px" height="1100px" />
@@ -126,6 +128,10 @@ function openTopic(evt, topicName) {
     document.getElementById(topicName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+</script>
+
+<script>
+	document.getElementById("defaultOpen").click();
 </script>
 
 </body>
